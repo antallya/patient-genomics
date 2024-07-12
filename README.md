@@ -20,15 +20,31 @@ Due to the presence of genes with extremely high magnitudes compared to each oth
 
 ### Methods that were not optimal
   
-  ### PCA
+  ##### PCA
   PCA might not be a great way of reducing dimensionality as the resulting variables (PCs) are linear combinations of the variables, so information from the original variables is lost.
-  
-  ### Feature Selection
-  We tried reducing the variable set using feature selection, specifically backward selection because of its efficiency, however, due to the high dimensionality/colinearity and it being more adept for continuous class
-  variables, I didn't choose it.
 
-  ### GLM
+  ##### LDA
+  Didn't work well due to the high dimensionality and colinearity between each gene.
+  
+  ##### Feature Selection using regsubsets()
+  We tried reducing the variable set using feature selection, specifically using the regsubsets() function backward selection because of its efficiency, however, since it is based on linear regression and our variables
+  are categorical, I didn't use it.
+
+  ##### GLM
+  GLM was computationally expensive as it had to check pairwise each gene.
 
 ### Chosen Method
+I used RFEs to reduce the dimensionality of our database. 
+We aim to have approximately the same number of variables as observations or less, if we have more variables than observations this will cause underfitting in our training set, however, if we have more observations than variables this might cause overfitting on our training set. (note that because we were required to use QDA, we aimed for fewer variables in our training set)
+
+
+# In recursive random forests we do these steps
+
+# 1. Rank the importance of all features using backwards selection (start with all features and then remove the least important ones iteratively based on their significance yielded after doing t test on each variable).
+# 2. Eliminate the least important features. (removes small amount of varibales per loop that have collinearity)
+# 3. Build a model using the remaining features.
+# 4. Repeat steps 1-3 until the desired number of features is reached.
+
+# RFE trains the model during each iteration and evaluates its performance using a cross-validation set.
 
 
