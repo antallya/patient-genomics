@@ -547,13 +547,13 @@ ctrl <- trainControl(method = "cv",
                      verboseIter = TRUE)
 
 # Train the SVM model using the train function
-#svm_cv <- train(x = train_data[, 1:number_of_columns],  # Predictors (features)
-#                y = as.numeric(train_labels),          # Outcome (class labels)
-#                method = "svmLinear",                  # SVM with linear kernel
-#                trControl = ctrl,                      # Cross-validation settings
-#                preProcess = c("center", "scale"),      # Pre-processing steps
-#                tuneGrid = expand.grid(C = seq(0, 2, length = 20))  # Hyperparameter tuning (optional)
-#)
+svm_cv <- train(x = train_data[, 1:number_of_columns],  # Predictors (features)
+                y = as.numeric(train_labels),          # Outcome (class labels)
+                method = "svmLinear",                  # SVM with linear kernel
+                trControl = ctrl,                      # Cross-validation settings
+                preProcess = c("center", "scale"),      # Pre-processing steps
+                tuneGrid = expand.grid(C = seq(0, 2, length = 20))  # Hyperparameter tuning (optional)
+)
 # Train the SVM model using the train function
 train_labels_modified <- train_labels
 levels(train_labels_modified) <- make.names(levels(train_labels_modified))
