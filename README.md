@@ -1,7 +1,8 @@
 # Description
-Hi! I am an applied mathematician/statistician wanting to learn more about the world of DS and CS.
+Hi! I am an applied mathematician/statistician wanting to learn more about the world of DS and CS :).
 This is a project I did during one of my master's classes where we analyzed a **single-cell RNA-seq dataset**.
-**My part in this project was to do the dimensionality reduction and data processing, using statistical tecniques.**
+
+*My part in this project was to do the dimensionality reduction and data processing, using statistical techniques.*
 
 ## Dataset Overview
 The dataset used is a subset of a larger single-cell RNA-seq dataset compiled by the **Allen Institute**, I retrieved it from Kaggle
@@ -41,7 +42,7 @@ We aim to have approximately the same number of variables as observations or les
 In recursive random forests, we do these steps:
 
 1. Rank the importance of all features using backward selection (start with all features and then remove the least important ones iteratively based on their significance yielded after doing t test on each variable).
-2. Eliminate the least important features. (removes a small amount of variables per loop that have collinearity)
+2. Eliminate the least important features. (removes a small number of variables per loop that have collinearity)
 3. Build a model using the remaining features.
 4. Repeat steps 1-3 until the desired number of features is reached.
 
