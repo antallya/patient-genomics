@@ -1,10 +1,11 @@
 # Description
 Hi! I am an applied mathematician/statistician wanting to learn more about the world of DS and CS.
-This is a project I did during one of my master's classes where we analyzed a single-cell RNA-seq dataset.
+This is a project I did during one of my master's classes where we analyzed a **single-cell RNA-seq dataset**.
 My part in this project was to do the dimensionality reduction and data processing.
 
 ## Dataset Overview
-The data set has 78 rows (patients) 4949 columns with 4948 gene expression measurements of cancer tissue, each column representing a ‘gene’ with column 4949 having the information of a class variable with two values: 1 and 2.
+The dataset used is a subset of a larger single-cell RNA-seq dataset compiled by the **Allen Institute**, I retrieved it from Kaggle
+This data frame consists of 78 rows (patient's cell) 4949 columns with 4948 gene expression measurements of cancer tissue, each column representing a ‘gene’ with column 4949 having the information of a class variable with two values: 1 and 2 (invasive or non-invasive cancer).
 
 ## Missing values
 We use Bootstrap to replace the missing values assuming NA are data *missing at random*, which makes sense as this is a dataset of genes from patients. 
