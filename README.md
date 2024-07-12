@@ -1,7 +1,7 @@
 # Description
 Hi! I am an applied mathematician/statistician wanting to learn more about the world of DS and CS.
 This is a project I did during one of my master's classes where we analyzed a **single-cell RNA-seq dataset**.
-My part in this project was to do the dimensionality reduction and data processing.
+**My part in this project was to do the dimensionality reduction and data processing, using statistical tecniques.**
 
 ## Dataset Overview
 The dataset used is a subset of a larger single-cell RNA-seq dataset compiled by the **Allen Institute**, I retrieved it from Kaggle
